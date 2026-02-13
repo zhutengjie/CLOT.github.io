@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="From Motion Tracking to Versatile Humanoid Control via Guided Diffusion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CLOT</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero is-link is-fullheight video" style="overflow: hidden; position:relative;">
+    <div class="hero-video" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 101%; height: 101%;">
+      <video playsinline autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
+        <source src="static/videos/teaser.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-video is-hidden-tablet is-inline-block-mobile"
+      style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 101%; height: 101%;">
+      <video playsinline autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
+        <source src="static/videos/teaser.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="overlay"></div>
+    
+    <!-- <div style="position: absolute; bottom: 20px; right: 20px; color: white; padding: 10px 15px; border-radius: 8px; font-size: 0.9rem; max-width: 380px; z-index: 10; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">
+      <div style="margin-bottom: 5px;"><sup>*</sup> Equal contribution; order decided by coin toss.</div>
+      <div><sup>†</sup> Equal advising; order mirrors the coin toss, with the other lab listed last.</div>
+    </div> -->
+  
+  <div class="hero-head is-hidden-mobile">
+    <header class="navbar">
+      <div class="container is-size-5">
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item pl-4 pr-4" href="https://arxiv.org/abs/2508.08241" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">
+              <span class="icon" style="margin-right:5px;">
+                <i class="ai ai-arxiv"></i>
+              </span>
+              <span>arXiv</span>
+            </a>
+            <a href="index.html" class="navbar-item pl-4 pr-4" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">
+              <span class="icon" style="margin-right:5px; font-size: 1.2em;">
+                🤗
+              </span>
+              <span>Data(Coming Soon)</span>
+            </a>
+            <span class="navbar-item  pl-4 pr-4">
+              <a href="index.html" class="button is-inverted is-large">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code(Coming Soon)</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 9rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">
+        CLOT
+      </h1>
+      <h1 class="subtitle is-1 publication-title is-size-4-mobile" style="font-size: 3.5rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">
+        Closed-Loop Global Motion Tracking for Whole-Body Humanoid Teleoperation
+      </h1>
+      <p style="font-size: 1.5rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">
+        <a href="index.html">Tengjie Zhu<sup>*</sup></a>, 
+        <a href="index.html">Guanyu Cai<sup>*</sup></a>, 
+        <a href="index.html">Zhaohui Yang<sup>*</sup></a>,
+        <a href="index.html">Guanzhu Ren</a>,
+        <a href="index.html">Haohui Xie</a>,
+        <a href="index.html">Junsong Wu</a>,
+        <a href="index.html">Zirui Wang</a>,
+        <a href="index.html">Jingbo Wang</a>,
+        <a href="index.html">Xiaokang Yang</a>,
+        <a href="index.html">Yao Mu<sup>†</sup></a>
+        <a href="index.html">Yichao Yan<sup>†</sup></a>
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <h2 class="title is-2">Video</h2>
+        <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+          <iframe src="https://www.youtube.com/embed/RS_MtKVIAzY"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"></iframe>
+        </div>
+      </div>
+      <div class="column is-half">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p class="abstract-text" style="font-size: 0.95rem; line-height: 1.5;">
+            Long-horizon whole-body humanoid teleoperation remains challenging due to accumulated global pose drift, particularly on full-sized humanoids. Although recent learning-based tracking methods enable agile and coordinated motions, they typically operate in the robot's local frame and neglect global pose feedback, leading to drift and instability during extended execution. In this work, we present CLOT, a real-time wholebody humanoid teleoperation system that achieves closed-loop global motion tracking via high-frequency localization feedback. CLOT synchronizes operator and robot poses in a closed loop, enabling drift-free human-to-humanoid mimicry over long time horizons. However, directly imposing global tracking rewards in reinforcement learning, often results in aggressive and brittle corrections. To address this, we propose a data-driven randomization strategy that decouples observation trajectories from reward evaluation, enabling smooth and stable global corrections. We further regularize the policy with an adversarial motion prior to suppress unnatural behaviors. To support CLOT, we collect 20 hours of carefully curated human motion data for training the humanoid teleoperation policy. We design a transformer-based policy and train it for over 1300 GPU hours. The policy is deployed on a full-sized humanoid with 31 DoF (excluding hands). Both simulation and real-world experiments verify high-dynamic motion, high-precision tracking, and strong robustness in sim-to-real humanoid teleoperation. Motion data, demos and code can be found in our website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Whole-Body Tracking Demos</h2>
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video autoplay loop muted playsinline src="static/videos/motion_tracking/ppt_1_new.mp4" poster="static/videos/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video autoplay loop muted playsinline src="static/videos/motion_tracking/PPT_2_new.mp4" poster="static/videos/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      <!-- </div>
+        <div class="column is-full-width is-centered has-text-centered">
+        <video autoplay loop muted playsinline src="static/videos/motion_tracking/prep_IMG_2661.mp4" poster="static/videos/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Robustness Demos</h2>
+    <!-- <p class="has-text-centered" style="font-size: 1.2rem; margin-bottom: 2rem;">
+      Below are 24 clips from policies trained on 14 distinct ~3-minute sequences, all using <strong>exactly the same MDP setup and hyperparameters<strong></strong>.
+    </p> -->
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video autoplay loop muted playsinline src="static/videos/motion_tracking/PPT_4_new.mp4" poster="static/videos/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video autoplay loop muted playsinline src="static/videos/motion_tracking/1.mp4" poster="static/videos/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      <!-- </div>
+        <div class="column is-full-width is-centered has-text-centered">
+        <video autoplay loop muted playsinline src="static/videos/motion_tracking/prep_IMG_2661.mp4" poster="static/videos/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Long-Horizon Loco-Manipulation Demos</h2>
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video autoplay loop muted playsinline src="static/videos/motion_tracking/PPT_5_new.mp4" poster="static/videos/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video autoplay loop muted playsinline src="static/videos/motion_tracking/PPT_6_new.mp4" poster="static/videos/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      <!-- </div>
+        <div class="column is-full-width is-centered has-text-centered">
+        <video autoplay loop muted playsinline src="static/videos/motion_tracking/prep_IMG_2661.mp4" poster="static/videos/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Long-Term Stability Demos</h2>
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video autoplay loop muted playsinline src="static/videos/motion_tracking/PPT_7_new.mp4" poster="static/videos/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video autoplay loop muted playsinline src="static/videos/motion_tracking/PPT_8_new.mp4" poster="static/videos/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      <!-- </div>
+        <div class="column is-full-width is-centered has-text-centered">
+        <video autoplay loop muted playsinline src="static/videos/motion_tracking/prep_IMG_2661.mp4" poster="static/videos/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
